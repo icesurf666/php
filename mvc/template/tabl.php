@@ -1,21 +1,8 @@
-<?php
-// TODO - вообще неправильно так делать, но главное, что работает, да вообще все бы переписать - Весь проект!!!, а то полны бред
-$name = Access::Session();
-if($name != 0){
-    $text = 'Выход';
-} else {
-    $text = 'Вход';
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <body>
 
@@ -28,28 +15,27 @@ if($name != 0){
             </a>
             <div class="menu__block">
                 <ul class="menu__list">
-                    <li class="menu_li"><a href="/" class="menu__link">Главная страница</a></li>
-                    <li class="menu_li"><a href="/login" class="menu__link"><?=$text?></a></li>
+                    <?php foreach ($menu as $key => $value): ?>
+                        <li class="menu_li"><a href="<?= $key?>" class="menu__link"><?=$value[0]?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-</div>
 
 <div class="content">
-	<div class="container">
-			<div class="content-block">
-				<h2><?= Index::getHeader()?></h2>
-				<p>
-					<?php if ($name): ?>
-						<?='Здраствуйте: '.$name.'<br><a href="/balance">Посмотреть баланс</a>'?>
-					<?php else:?>
-						<?='Чтобы просмотреть баланс необходимо пройти авторизацию'?>
-					<?php endif; ?>
-				</p>
-			</div>
-	</div>
+    <div class="container">
+        <div class="content-block">
+
+                    <?php for($i = 1; $i <= $param; $i++){
+                            for($j = 1; $j <= $param; $j++) { ?>
+                                <div class="box"><?php echo $i * $j ?></div>
+                            <?php } ?> <br> <?php } ?>
+
+            </p>
+        </div>
+    </div>
 </div>
 </body>
 <style>
@@ -176,7 +162,21 @@ if($name != 0){
         text-align: center;
         text-transform: uppercase;
     }
+    .box {
+        display: inline-block;
+        margin-top: -2px;
+        margin-right: -6px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 2px solid rgba(239, 174, 2, .6);
 
-</style>
+    }
+</style
+
+
+
+
 
 </html>

@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<div class="header">
-    <div class="menu">
-        <div class="container">
-            <a href="/">
-                <div class="header-logo"></div>
-            </a>
-            <div class="menu__block">
-                <ul class="menu__list">
-                    <li class="menu_li"><a href="/" class="menu__link">Главная страница</a></li>
-                    <li class="menu_li"><a href="/login" class="menu__link"><?=$text?></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="content">
-    <div class="container">
-        <div class="page-not-found">
-            <?= $header_error?>
-        </div>
-    </div>
-</div>
-</body>
 <style>
+
+
     *{
         margin: 0;
         padding: 0;
@@ -156,7 +124,4 @@
         text-align: center;
         text-transform: uppercase;
     }
-
 </style>
-
-</html>

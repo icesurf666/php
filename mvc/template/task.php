@@ -27,8 +27,6 @@
 <div class="content">
     <div class="container">
         <div class="content-block">
-            <h2><?= $menu[$level][0]?></h2>
-            <p><?= $menu[$level][1]?><br><br>
                <?php if (!empty($array_task1)): ?>
                     <b>Массив случайных элементов:</b><br><br>
 
@@ -40,11 +38,7 @@
                         <b>Минимальный элемент массива: </b> <?=min($array_task1)?><br>
                         <b>Максимальный элемент массива: </b> <?=max($array_task1)?>
 
-                <?php elseif ($level === 'task2'): ?>
-                    <?php for($i = 1; $i <= $param; $i++){
-                            for($j = 1; $j <= $param; $j++) { ?>
-                                <div class="box"><?php echo $i * $j ?></div>
-                            <?php } ?> <br> <?php } ?>
+
                 <?php endif; ?>
             </p>
         </div>

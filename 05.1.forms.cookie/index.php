@@ -1,7 +1,7 @@
 <?php
 
 
-# Загрузка нужных классов
+# автоматическая загрузка нужных классов
 
 spl_autoload_register(function ($class_name) {
 
@@ -14,10 +14,7 @@ spl_autoload_register(function ($class_name) {
 
 });
 
-# Отвечает за пути
-require_once ('Routes/Routes.php');
-
-# точка входа
+# точка входа приложения
 $main = new Main();
 $main->run();
 
